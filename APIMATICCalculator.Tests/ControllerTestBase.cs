@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using APIMATICCalculator.Standard;
+using APIMATICCalculator.PCL;
 using APIMATICCalculator.Tests.Helpers;
  
-using APIMATICCalculator.Standard.Models;
+using APIMATICCalculator.PCL.Models;
 
 namespace APIMATICCalculator.Tests
 {

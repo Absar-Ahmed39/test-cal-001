@@ -8,11 +8,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using APIMATICCalculator.Standard;
-using APIMATICCalculator.Standard.Utilities;
-using APIMATICCalculator.Standard.Http.Client;
-using APIMATICCalculator.Standard.Http.Request;
-using APIMATICCalculator.Standard.Http.Response;
+using APIMATICCalculator.PCL;
+using APIMATICCalculator.PCL.Utilities;
+using APIMATICCalculator.PCL.Http.Client;
+using APIMATICCalculator.PCL.Http.Request;
+using APIMATICCalculator.PCL.Http.Response;
 using System.Security.Cryptography;
 using Newtonsoft.Json.Linq;
 

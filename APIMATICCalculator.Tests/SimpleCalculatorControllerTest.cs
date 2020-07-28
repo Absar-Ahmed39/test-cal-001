@@ -9,15 +9,15 @@ using System.Globalization;
 using System.IO;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Converters;
-using APIMATICCalculator.Standard;
-using APIMATICCalculator.Standard.Utilities; 
-using APIMATICCalculator.Standard.Http.Client;
-using APIMATICCalculator.Standard.Http.Response;
+using APIMATICCalculator.PCL;
+using APIMATICCalculator.PCL.Utilities; 
+using APIMATICCalculator.PCL.Http.Client;
+using APIMATICCalculator.PCL.Http.Response;
 using APIMATICCalculator.Tests.Helpers;
 using NUnit.Framework;
-using APIMATICCalculator.Standard;
-using APIMATICCalculator.Standard.Controllers;
-using APIMATICCalculator.Standard.Exceptions;
+using APIMATICCalculator.PCL;
+using APIMATICCalculator.PCL.Controllers;
+using APIMATICCalculator.PCL.Exceptions;
 
 namespace APIMATICCalculator.Tests
 {
@@ -45,8 +45,8 @@ namespace APIMATICCalculator.Tests
         public async Task TestMultiply() 
         {
             // Parameters for the API call
-            Standard.Models.GetCalculateInput input = new Standard.Models.GetCalculateInput();
-            input.Operation = Standard.Models.OperationTypeEnumHelper.ParseString("MULTIPLY");
+            PCL.Models.GetCalculateInput input = new PCL.Models.GetCalculateInput();
+            input.Operation = PCL.Models.OperationTypeEnumHelper.ParseString("MULTIPLY");
             input.X = 4;
             input.Y = 5;
 
