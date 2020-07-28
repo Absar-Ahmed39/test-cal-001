@@ -8,7 +8,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7b6de70d-4040-4d18-9d69-2715ec7b9eae}</ProjectGuid>
+    <ProjectGuid>{0a31fd31-5912-4e71-bbeb-1382a3db8f4a}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>APIMATICCalculator.Tests</RootNamespace>
@@ -83,7 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\APIMATICCalculator.PCL\APIMATICCalculator.PCL.csproj">
-      <Project>{836e0a3c-d7b5-462f-b776-d8fdaf57abdf}</Project>
+      <Project>{da2bf1c0-28b4-4aff-9654-face3b279a7b}</Project>
       <Name>APIMATICCalculator.PCL</Name>
     </ProjectReference>
   </ItemGroup>

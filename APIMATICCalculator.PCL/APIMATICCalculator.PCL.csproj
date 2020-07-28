@@ -10,7 +10,7 @@
     <AssemblyName>APIMATICCalculator.PCL</AssemblyName>
     <OutputType>Library</OutputType>
     <OutputPath>bin/DEBUG/</OutputPath>
-    <ProjectGuid>{836e0a3c-d7b5-462f-b776-d8fdaf57abdf}</ProjectGuid>
+    <ProjectGuid>{da2bf1c0-28b4-4aff-9654-face3b279a7b}</ProjectGuid>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
     <NuGetPackageImportStamp>ee2bb91c</NuGetPackageImportStamp>
