@@ -1,6 +1,6 @@
 # Getting started
 
-Simple calculator API hosted on APIMATIC with version 1.6 new
+Simple calculator API hosted on APIMATIC
 
 ## How to Build
 
@@ -15,12 +15,12 @@ This should display the version of the PIP Dependency Manager installed if your 
 * Using command line, navigate to the directory containing the generated files (including ```requirements.txt```) for the SDK.
 * Run the command ```pip install -r requirements.txt```. This should install all the required dependencies.
 
-![Building SDK - Step 1](https://apidocs.io/illustration/python?step=installDependencies&workspaceFolder=APIMATIC%20Calculator%20new-Python)
+![Building SDK - Step 1](https://apidocs.io/illustration/python?step=installDependencies&workspaceFolder=APIMATIC%20Calculator-Python)
 
 
 ## How to Use
 
-The following section explains how to use the Apimaticcalculatornew SDK package in a new project.
+The following section explains how to use the Apimaticcalculator SDK package in a new project.
 
 ### 1. Open Project in an IDE
 
@@ -30,17 +30,17 @@ Open up a Python IDE like PyCharm. The basic workflow presented here is also app
 
 Click on ```Open``` in PyCharm to browse to your generated SDK directory and then click ```OK```.
 
-![Open project in PyCharm - Step 2](https://apidocs.io/illustration/python?step=openProject0&workspaceFolder=APIMATIC%20Calculator%20new-Python)     
+![Open project in PyCharm - Step 2](https://apidocs.io/illustration/python?step=openProject0&workspaceFolder=APIMATIC%20Calculator-Python)     
 
 The project files will be displayed in the side bar as follows:
 
-![Open project in PyCharm - Step 3](https://apidocs.io/illustration/python?step=openProject1&workspaceFolder=APIMATIC%20Calculator%20new-Python&projectName=apimaticcalculatornew)     
+![Open project in PyCharm - Step 3](https://apidocs.io/illustration/python?step=openProject1&workspaceFolder=APIMATIC%20Calculator-Python&projectName=apimaticcalculator)     
 
 ### 2. Add a new Test Project
 
 Create a new directory by right clicking on the solution name as shown below:
 
-![Add a new project in PyCharm - Step 1](https://apidocs.io/illustration/python?step=createDirectory&workspaceFolder=APIMATIC%20Calculator%20new-Python&projectName=apimaticcalculatornew)
+![Add a new project in PyCharm - Step 1](https://apidocs.io/illustration/python?step=createDirectory&workspaceFolder=APIMATIC%20Calculator-Python&projectName=apimaticcalculator)
 
 Name the directory as "test"
 
@@ -48,7 +48,7 @@ Name the directory as "test"
    
 Add a python file to this project with the name "testsdk"
 
-![Add a new project in PyCharm - Step 3](https://apidocs.io/illustration/python?step=createFile&workspaceFolder=APIMATIC%20Calculator%20new-Python&projectName=apimaticcalculatornew)
+![Add a new project in PyCharm - Step 3](https://apidocs.io/illustration/python?step=createFile&workspaceFolder=APIMATIC%20Calculator-Python&projectName=apimaticcalculator)
 
 Name it "testsdk"
 
@@ -57,10 +57,10 @@ Name it "testsdk"
 In your python file you will be required to import the generated python library using the following code lines
 
 ```Python
-from apimaticcalculatornew.apimaticcalculatornew_client import ApimaticcalculatornewClient
+from apimaticcalculator.apimaticcalculator_client import ApimaticcalculatorClient
 ```
 
-![Add a new project in PyCharm - Step 4](https://apidocs.io/illustration/python?step=projectFiles&workspaceFolder=APIMATIC%20Calculator%20new-Python&libraryName=apimaticcalculatornew.apimaticcalculatornew_client&projectName=apimaticcalculatornew&className=ApimaticcalculatornewClient)
+![Add a new project in PyCharm - Step 4](https://apidocs.io/illustration/python?step=projectFiles&workspaceFolder=APIMATIC%20Calculator-Python&libraryName=apimaticcalculator.apimaticcalculator_client&projectName=apimaticcalculator&className=ApimaticcalculatorClient)
 
 After this you can write code to instantiate an API client object, get a controller object and  make API calls. Sample code is given in the subsequent sections.
 
@@ -68,7 +68,7 @@ After this you can write code to instantiate an API client object, get a control
 
 To run the file within your test project, right click on your Python file inside your Test project and click on ```Run```
 
-![Run Test Project - Step 1](https://apidocs.io/illustration/python?step=runProject&workspaceFolder=APIMATIC%20Calculator%20new-Python&libraryName=apimaticcalculatornew.apimaticcalculatornew_client&projectName=apimaticcalculatornew&className=ApimaticcalculatornewClient)
+![Run Test Project - Step 1](https://apidocs.io/illustration/python?step=runProject&workspaceFolder=APIMATIC%20Calculator-Python&libraryName=apimaticcalculator.apimaticcalculator_client&projectName=apimaticcalculator&className=ApimaticcalculatorClient)
 
 
 ## How to Test
@@ -89,7 +89,7 @@ API client can be initialized as following.
 
 ```python
 
-client = ApimaticcalculatornewClient()
+client = ApimaticcalculatorClient()
 ```
 
 
@@ -116,9 +116,7 @@ An instance of the ``` SimpleCalculatorController ``` class can be accessed from
 
 ```python
 def get_calculate(self,
-                      operation,
-                      x,
-                      y)
+                      options=dict())
 ```
 
 #### Parameters
@@ -126,7 +124,7 @@ def get_calculate(self,
 | Parameter | Tags | Description |
 |-----------|------|-------------|
 | operation |  ``` Required ```  | The operator to apply on the variables |
-| mX |  ``` Required ```  | The LHS value |
+| x |  ``` Required ```  | The LHS value |
 | y |  ``` Required ```  | The RHS value |
 
 
@@ -134,11 +132,19 @@ def get_calculate(self,
 #### Example Usage
 
 ```python
-operation = OperationEnum.SUM
-x = 132.497569912811
-y = 132.497569912811
+collect = {}
 
-result = simple_calculator_controller.get_calculate(operation, x, y)
+operation = OperationTypeEnum.MULTIPLY
+collect['operation'] = operation
+
+x = 4
+collect['x'] = x
+
+y = 5
+collect['y'] = y
+
+
+result = simple_calculator_controller.get_calculate(collect)
 
 ```
 
