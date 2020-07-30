@@ -135,8 +135,8 @@ def get_calculate(self,
 
 ```python
 operation = OperationEnum.SUM
-x = 235.224746891868
-y = 235.224746891868
+x = 132.497569912811
+y = 132.497569912811
 
 result = simple_calculator_controller.get_calculate(operation, x, y)
 
